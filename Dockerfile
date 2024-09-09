@@ -1,5 +1,5 @@
-# Utiliser l'image Node.js officielle sur Debian
-FROM node:22
+# Utiliser l'image Node.js qui correspond à ses besoins
+FROM node:lts-bookworm-slim
 
 # Définir le répertoire de travail dans le conteneur
 WORKDIR /app
