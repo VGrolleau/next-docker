@@ -5,7 +5,8 @@
 3. Modifier les éléments qui ont besoin de l'être.
 
 > [!NOTE]
-> Choisir la version de node qui correspond à nos besoins.
+> Choisir la version de `node.js` qui correspond à nos besoins.
+> Pour ce faire, il faut aller sur la page de Node.js dans [Docker Hub](https://hub.docker.com/_/node).
 
 > [!WARNING]
 > Pour créer de nouveaux fichiers / dossiers, il est impératif d'avoir un utilisateur non-root.
