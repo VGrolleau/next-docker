@@ -19,9 +19,9 @@
 > Cela permettra la commande `RUN chown -R UID:GID /app` en remplaçant les UID et GID par leurs valeurs respectives.
 
 4. Créer l'image docker en tapant `docker build -t nomDeMonImage .`
-5. Créer le conteneur en faisant `docker run -it --name nomDeMonConteneur -p 3000:3000 -v $(pwd):/app nomDeMonImage`
+5. Créer le conteneur en faisant `docker run -it --name nomDeMonConteneur -p 3000:3000 -v .:/app nomDeMonImage`
 6. Une fois fait, nous nous trouvons dans un terminal dans le conteneur. Nous allons donc pouvoir créer notre projet en tapant `npx create-next-app@latest nomDuProjetNext`
-7. Il ne reste plus qu'à se déplacer dans le projet en faisant `cd nomDuProjetNext` et à le développer.
+7. Dés la création terminée, il ne reste plus qu'à se déplacer dans le projet en faisant `cd nomDuProjetNext` et à le développer.
 
 > [!NOTE]
 > Pour s'assurer que le projet fonctionne, même sans retour d'erreur, on peut faire la commande `npm run dev`.
