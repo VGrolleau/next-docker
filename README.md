@@ -4,6 +4,9 @@
 2. Dans ce dossier, copier le fichier Dockerfile.
 3. Modifier les éléments qui ont besoin de l'être.
 
+> [!NOTE]
+> Choisir la version de node qui correspond à nos besoins.
+
 > [!WARNING]
 > Pour créer de nouveaux fichiers / dossiers, il est impératif d'avoir un utilisateur non-root.
 
