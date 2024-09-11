@@ -49,10 +49,15 @@ npm install prisma --save-dev
 
 > [!NOTE]
 > `mysql` : base de données utilisée (mysql étant ce qu'il faut préciser pour MariaDB)
+>
 > `user` : utilisateur défini dans le fichier `compose.yml`
+>
 > `password` : mot de passe utilisé pour l'utilisateur et défini dans le fichier `compose.yml`
+>
 > `db` : nom du service défini dans le fichier `compose.yml` et qui gère la base de données
+>
 > `3306` : port de la base de données
+>
 > `nextjsdb` : nom de la base de données défini dans le fichier `compose.yml`
 
 5. Migrer la base de données en tapant `npx prisma migrate dev --name init`, cela créera les tables (correspondantes aux modèles dans le fichier `prisma/schema.prisma`) dans la base de données MariaDB.
