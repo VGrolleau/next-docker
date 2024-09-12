@@ -2,17 +2,12 @@ version: "3.8"
 
 services:
   app:
-    build: ./app
+    build: .
     container_name: nextjs-app
     ports:
       - "3000:3000"
     volumes:
-      - ./app:/app
-    environment:
-      DB_HOST: db
-      DB_USER: user
-      DB_PASSWORD: password
-      DB_NAME: nextjsdb
+      - .:/app
     depends_on:
       - db
     stdin_open: true
@@ -20,7 +15,7 @@ services:
 
   db:
     image: mariadb:latest
-    container_name: mariadb
+    container_name: mariadb-test
     environment:
       MARIADB_ROOT_PASSWORD: password
       MARIADB_DATABASE: nextjsdb
