@@ -18,7 +18,7 @@
 >   
 > Cela permettra la commande `RUN chown -R UID:GID /app` en remplaçant les UID et GID par leurs valeurs respectives.
 
-4. Copier le fichier `compose.yml` pour orchestrer le projet avec Prisma, NextAuth, et MariaDB.
+4. Copier le fichier `compose.yml` pour orchestrer le projet avec Prisma, NextAuth, et PostgreSQL.
 5. Construire les conteneurs avec la commande `docker-compose up --build -d`
 6. Accéder au conteneur via la commande `docker exec -it nextjs-app bash`
 
@@ -37,18 +37,18 @@ npm install prisma --save-dev
 ```
 2. Initialiser Prisma en exécutant `npx prisma init`
 3. Modifier le fichier `prisma/schema.prisma` juste créé en récupérant celui présent dans ce repository.
-4. Dans le fichier `.env` (créé lors de l'initialisation de Prisma), modifier la variable `DATABASE_URL` pour qu'elle corresponde à `DATABASE_URL="mysql://user:password@db:3306/nextjsdb"`
+4. Dans le fichier `.env` (créé lors de l'initialisation de Prisma), modifier la variable `DATABASE_URL` pour qu'elle corresponde à `DATABASE_URL="postgresql://postgres:password@db:5432/nextjsdb"`
 
 > [!NOTE]
-> `mysql` : base de données utilisée (mysql étant ce qu'il faut préciser pour MariaDB)
+> `postgresql` : base de données utilisée
 >
-> `user` : utilisateur défini dans le fichier `compose.yml`
+> `postgres` : utilisateur défini dans le fichier `compose.yml`
 >
 > `password` : mot de passe utilisé pour l'utilisateur et défini dans le fichier `compose.yml`
 >
 > `db` : nom du service défini dans le fichier `compose.yml` et qui gère la base de données
 >
-> `3306` : port de la base de données
+> `5432` : port de la base de données
 >
 > `nextjsdb` : nom de la base de données défini dans le fichier `compose.yml`
 
